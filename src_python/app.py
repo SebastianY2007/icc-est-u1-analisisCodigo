@@ -1,6 +1,10 @@
 from benchmarking import Benchmarking
 from metodos_ordenamiento import MetodosOrdenamiento
 import matplotlib.pyplot as plt
+from datetime import datetime
+
+fecha_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+plt.figure(num=f"Sebastian Yupangui - {fecha_hora}", figsize=(10, 6))
 
 if __name__ == "__main__":
     print("Funciona")
@@ -55,6 +59,7 @@ if __name__ == "__main__":
     
     plt.xlabel("Tamaño del Arreglo")
     plt.ylabel("Tiempo (segundos)")
-    plt.title("Comparativa Metodos")
+    plt.title(f"Comparativa Metodos\nSebastian Yupangui {fecha_hora}")
     plt.grid()
+    plt.legend()
     plt.show()
